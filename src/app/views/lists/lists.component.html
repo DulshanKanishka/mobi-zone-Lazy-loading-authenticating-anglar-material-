@@ -1,0 +1,87 @@
+<mat-card style="margin-left: 40px;margin-right: 40px;margin-top: 30px;background-color: rgba(255, 255, 255, 0.815)">
+
+  <div>
+    <div style="margin-left: 190px;margin-top: 5px;margin-bottom: 15px">
+      <h1><u>Products Type</u> <span class="badge pink"></span></h1>
+    </div>
+    <form #myForm="ngForm">
+      <table>
+
+        <tr>
+          <td>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;margin-left: 30px">list
+              Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+          </td>
+          <td style="margin-bottom: 20px;margin-top: 20px">&nbsp;<b>:-</b>&nbsp;&nbsp;</td>
+          <td>
+            <div style="margin-top: 20px" class="form-group">
+
+              <mat-form-field style="width: 600px">
+                <mat-select placeholder="List Type">
+                  <mat-option value="Popular">Popular</mat-option>
+                  <mat-option value="Latest">Latest</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;margin-left: 30px">Select
+              Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+          </td>
+          <td style="margin-bottom: 0px;margin-top: 20px;">&nbsp;<b>:-</b>&nbsp;&nbsp;</td>
+          <td style="width: 760px;">
+            <mat-form-field style="width: 600px">
+              <mat-select placeholder="Phone Name">
+                <mat-option value="Popular">Popular</mat-option>
+                <mat-option value="Latest">Latest</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+        </tr>
+
+      </table>
+      <!-- <button style="margin-left: 535px ; margin-bottom: 30px;margin-top: 20px" (click)="addHomeList()" value="Submit"
+      type="submit" class="btn btn-outline-primary waves-effect">Add To Popular list&nbsp;&nbsp;&nbsp;<i class="fa fa-plus"
+        aria-hidden="true"></i></button> -->
+
+      <button mat-raised-button matTooltip="Add new" aria-label="Button that displays a tooltip when focused or hovered over"
+        style="color: black;margin-left: 500px" (click)="addHomeList()" mat-stroked-button color="primary" class="link-btnn">Add</button>&nbsp;&nbsp;&nbsp;
+
+    </form>
+  </div>
+
+
+  <div style="margin-left: 30px;margin-bottom: 40px">
+    <table class="table">
+      <thead class="black white-text">
+        <tr>
+          <!--<th scope="col">Count</th>-->
+          <th scope="col">Phone Name</th>
+          <!--<th scope="col">Price</th>-->
+          <th scope="col">Type</th>
+          <!--<th scope="col">Edit</th>-->
+          <th scope="col">&nbsp;&nbsp;&nbsp;Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of homelistList">
+          <!--<th scope="row">1</th>-->
+          <td>{{list.namee}}</td>
+          <!--<td>{{list.Price}}</td>-->
+          <td>{{list.typee}}</td>
+          <!--<td><i class="fa fa-pencil fa-2x amber-text ml-2" aria-hidden="true"></i></td>-->
+          <!--<td><i class="fa fa-times fa-2x red-text ml-2" aria-hidden="true"></i></td>-->
+          <td>
+            <div style="width: 40px;height: 35px;margin-left: 21px" class="view overlay zoom">
+              <img style="width: 25px;height: 25px" src="../../assets/X.png" class="img-fluid " alt="zoom">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</mat-card>

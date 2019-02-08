@@ -1,0 +1,49 @@
+<div>
+  <div style="height: 40px;" id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <video style="width: 100%" class="video-fluid" autoplay loop muted>
+          <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-left: 450px;margin-top: 180px;margin-right: 450px">
+  <mat-card style="max-width: 2000px;background-color: rgba(255, 255, 255, 0.671)" class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title style="margin-left: 290px"><b>Login Form </b></mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div>
+
+
+        <form [formGroup]="loginForm">
+          <!-- Username : <input type="text" formControlName="userName"> <br> -->
+          <div style="margin-left: 20px;margin-right: 20px">
+            <mat-form-field class="example-full-width">
+              <input formControlName="userName" matInput placeholder="Customer Name" value="">
+            </mat-form-field>
+          </div>
+          <div style="margin-left: 20px;margin-right: 20px">
+            <mat-form-field class="example-full-width">
+              <input formControlName="password" matInput placeholder="Customer Name" value="">
+            </mat-form-field>
+          </div>
+          <!-- Password : <input type="text" formControlName="password"> <br> -->
+          <!-- <input type="button" value="Login" (click)="login()"> -->
+          <button mat-raised-button matTooltip="Login" (click)="login()" aria-label="Button that displays a tooltip when focused or hovered over"
+            style="color: black ;margin-left: 660px;margin-bottom: 20px" mat-stroked-button color="primary" class="link-btnnnn">Login</button>
+
+        </form>
+      </div>
+      <!-- </form> -->
+
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+</div>

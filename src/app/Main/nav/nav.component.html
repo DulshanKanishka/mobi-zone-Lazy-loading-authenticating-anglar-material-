@@ -1,0 +1,50 @@
+<!-- <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun"> -->
+<mat-toolbar style="height: 65px" color="primary" class="bga example-toolbar">
+  <!-- <mat-spinner> -->
+  <button class="bgb" matTooltip="Click for open menu" mat-icon-button (click)="snav.toggle()">
+    <!-- <mat-spinner ></mat-spinner> -->
+    <mat-icon>menu</mat-icon>
+  </button>
+  <!-- </mat-spinner> -->
+  <h1 style="color: rgba(0, 0, 0, 0.671)" class="example-app-name">Menu</h1>
+  <h1 style="margin-left: 680px;color: black;font-size: 40px" class="example-app-name">Admin</h1>
+
+  <h3 style="margin-left: 650px;color: black" matTooltip="Click for logout" class="example-app-name">Log Out</h3>
+
+  <button matTooltip="Click for logout" mat-icon-button color="primary">
+    <img (click)="logout()" style="max-width: 30px;max-height: 30px" src="../../../assets/icons8-sign-out-filled-50.png">
+  </button>
+
+
+  <!-- <button style="margin-left: 650px" (click) = "logout()">Logout</button> -->
+</mat-toolbar>
+
+<mat-sidenav-container style="height: 748px" class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+  <mat-sidenav class="bg" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+    fixedTopGap="56">
+    <mat-nav-list>
+      <!--side nav  buttons-->
+      <a mat-list-item style="font-size: 25px;margin-top: 15px" routerLinkActive="active" routerLink="stock"><img style="max-width: 30px;max-height: 30px;background-color: black"
+          src="../../../assets/icons8-small-business-50.png">&nbsp;&nbsp;&nbsp;<b>Shops</b></a>
+      <a mat-list-item style="font-size: 25px;margin-top: 20px" routerLinkActive="active" routerLink="ListsComponent"><img
+          style="max-width: 30px;max-height: 30px;background-color: black" src="../../../assets/icons8-menu-50.png">&nbsp;&nbsp;&nbsp;<b>Lists
+        </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <!-- <a mat-list-item style="font-size: 25px;margin-top: 15px" routerLinkActive="active" routerLink="AddingStock"><img style="max-width: 30px;max-height: 30px"
+          src="../../../assets/icons8-read-filled-500.png">&nbsp;&nbsp;&nbsp;<b>Adding Stock</b></a> -->
+      <a mat-list-item style="font-size: 25px;margin-top: 15px" routerLinkActive="active" routerLink="mobAdding"><img
+          style="max-width: 30px;max-height: 30px;background-color: black" src="../../../assets/icons8-mobile-50.png">&nbsp;&nbsp;&nbsp;<b>Mobile
+          Adding</b></a>
+
+      <a mat-list-item style="font-size: 25px;margin-top: 15px" routerLinkActive="active" routerLink="about"><img style="max-width: 30px;max-height: 30px;background-color: black"
+          src="../../../assets/icons8-about-50.png">&nbsp;&nbsp;&nbsp;<b>About Us</b></a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="background-color: rgb(201, 198, 198)">
+    <router-outlet></router-outlet>
+    <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- </div> -->
+
+<!-- <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div> -->

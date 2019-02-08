@@ -1,0 +1,118 @@
+<mat-card style="margin-left: 40px;margin-right: 40px;margin-top: 30px">
+
+
+  <div>
+    <form [formGroup]="form">
+    <div>
+
+      <table style="margin-top: 30px;margin-left: 40px;margin-bottom: 10px">
+
+        <tr>
+          <td>
+            <h4 style="margin-bottom: 20px;margin-top: 0px">&nbsp;<br>ID</h4>
+          </td>
+          <td style="margin-bottom: 20px;margin-top: 0px">
+            &nbsp;<b>:-</b>&nbsp;&nbsp;
+          </td>
+          <td>
+            <div style="margin-bottom: 20px;margin-top: 0px" class="form-group">
+              <label for="formGroupExampleInput2"></label>
+              <!-- <input style="border: 1px solid #ba68c8" type="text" class="form-control" id="formGroupExampleInput3" placeholder="id"[(ngModel)]="shops.sid" name="supplier"> -->
+              <!-- <form class="example-form"> -->
+                <mat-form-field class="example-full-width">
+                  <input #sid formControlName="sid" matInput placeholder="Shop ID" value="">
+                </mat-form-field>
+              <!-- </form> -->
+            </div>
+          </td>
+        </tr>
+
+        <!-- <tr>
+        <td>
+          <h4 style="margin-bottom: 20px;margin-top: 20px">Select Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+        </td>
+        <td style="margin-bottom: 20px;margin-top: 20px">
+          &nbsp;<b>:-</b>&nbsp;&nbsp;
+        </td>
+        <td>
+          <select style="border: 1px solid #ba68c8;margin-bottom: 20px;margin-top: 20px"  (change)="searchPhone($event)" class="custom-select d-block w-100" id="code" [(ngModel)]="shops.pname" name="code" required>
+            <option value="">Open Phone Search Menu</option>
+            <option *ngFor="let item of items">{{item.brand}}</option>
+          </select>
+        </td>
+      </tr> -->
+        <tr>
+          <td>
+            <h4 style="margin-bottom: 20px;margin-top: 20px">Shop Name</h4>
+          </td>
+          <td style="margin-bottom: 20px;margin-top: 20px">&nbsp;<b>:-</b>&nbsp;&nbsp;</td>
+          <td>
+            <div class="form-group">
+              <label for="formGroupExampleInput2"></label>
+              <!-- <input style="border: 1px solid #ba68c8;margin-bottom: 0px;margin-top: 0" type="text" class="form-control" id="formGroupExampleInput" placeholder="Shop Name" [(ngModel)]="shops.sname" name="sellingprice"> -->
+              <!-- <form class="example-form"> -->
+                <mat-form-field class="example-full-width">
+                  <input matInput #sname formControlName="sname" placeholder="Shop Name" value="">
+                </mat-form-field>
+              <!-- </form> -->
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h4 style="margin-bottom: 20px;margin-top: 0px">&nbsp;<br>City</h4>
+          </td>
+          <td style="margin-bottom: 20px;margin-top: 0px">
+            &nbsp;<b>:-</b>&nbsp;&nbsp;
+          </td>
+          <td>
+            <div style="margin-bottom: 20px;margin-top: 0px" class="form-group">
+              <label for="formGroupExampleInput2"></label>
+              <!-- <input style="border: 1px solid #ba68c8" type="text" class="form-control" id="formGroupExampl-eInput2" placeholder="City"[(ngModel)]="shops.place" name="supplier"> -->
+              <!-- <form class="example-form"> -->
+                <mat-form-field style="width: 900px" class="example-full-width">
+                  <input matInput #place FormControlName="place" placeholder="Place" value="">
+                </mat-form-field>
+              <!-- </form> -->
+            </div>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </form>
+    <button mat-raised-button matTooltip="Add new" aria-label="Button that displays a tooltip when focused or hovered over"
+      style="color: black;margin-left: 500px" (click)="createPost(sid,sname,place)" mat-stroked-button color="primary"
+      class="link-btnn">Add</button>&nbsp;&nbsp;&nbsp;
+
+  </div>
+
+  <!-- <button (click)="createPost(sid,sname,place)" style="margin-left: 593px ; margin-bottom: 30px" type="button" class="btn btn-outline-success waves-effect">Add Shops&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check" aria-hidden="true"></i></button> -->
+
+  <div style="margin-left: 40px;margin-bottom: 40px">
+
+
+    <!-- //////////////////////////////////////////////////// -->
+    <table class="mat-elevation-z8">
+      <thead class="black white-text">
+        <tr>
+          <th scope="col">ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th scope="col">Shop Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th scope="col">City &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+        <tr *ngFor="let post of posts">
+          <td>{{post.sid}}</td>
+          <td>{{post.sname}}</td>
+          <td>{{post.place}}</td>
+      </tbody>
+    </table>
+  </div>
+  <!-- <button (click)="loadItemCode()" style="margin-left: 592px;margin-bottom: 30px" type="button" class="btn btn-outline-primary waves-effect">Add To Stock&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-plus" aria-hidden="true"></i></button> -->
+  <button mat-raised-button matTooltip="Refresh Table" aria-label="Button that displays a tooltip when focused or hovered over"
+    style="color: black;margin-left: 500px" (click)="loadItemCode()" mat-stroked-button color="primary" class="link-btn">Refresh
+    Table</button>&nbsp;&nbsp;&nbsp;
+</mat-card>

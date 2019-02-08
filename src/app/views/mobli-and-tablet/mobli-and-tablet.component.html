@@ -1,0 +1,727 @@
+<mat-card style="margin-left: 40px;margin-right: 40px;margin-top: 30px">
+
+  <!--<div style="margin-right: 400px">-->
+  <form #formItems="ngForm">
+    <div style="background-color: rgb(255, 255, 255)">
+      <div style="margin-top: 30px;width: 982px">
+
+      </div>
+
+      <table style="margin-bottom: 30px">
+        <tr>
+
+          <td>
+            <h6 >brand</h6>
+          </td>
+          <td>
+            <h6>:-&nbsp;&nbsp;</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <!--<input placeholder="Placeholder" type="text" id="inputPlaceholderEx" class="form-control Tfield">-->
+              <!--<input placeholder="Phone Name" type="text" class="form-control Tfield"[(ngModel)]="phoneDetails.photo" name="photo">-->
+              <input placeholder="Phone Brand" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.brand"
+                name="brand">
+            </div>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>
+            <h6>Phone Name</h6>
+          </td>
+          <td>
+            <h6>:-&nbsp;&nbsp;</h6>
+          </td>
+          <td>
+            <div class="md-form">
+
+              <input placeholder="Phone Name" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.name"
+                name="name">
+
+            </div>
+          </td>
+          <td>
+            <!--(click)="searchPhoneDetails()"-->
+            <!--<button (click)="searchPhoneDetails()" type="button" name="btnsearch" class="btn btn-outline-info waves-effect"  >Info&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i></button>-->
+            <button (click)="searchCustomer()" type="button" name="btnsearch" class="btn btn-outline-info waves-effect">Info&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fa fa-search" aria-hidden="true"></i></button>
+            <!--<button type="button" class="btn btn-outline-info waves-effect fa fa-search " aria-hidden="true">Info&nbsp;&nbsp;&nbsp;&nbsp;</button>-->
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6>technolodgy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h6>
+          </td>
+          <td>
+            <h6>:-&nbsp;&nbsp;</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <input placeholder="technolodgy" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.technolodgy"
+                name="technolodgy">
+            </div>
+          </td>
+        </tr>
+
+        <tr style="margin-top: 0">
+          <td>
+            <h6 style="margin-left: 0px">twoGBands</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <input [(ngModel)]="phoneDetails.twoGBands" name="twoGBands" placeholder="twoGBands" type="text" class="form-control Tfield">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">threeGBands</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <input placeholder="threeGBands" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.threeGBands"
+                name="threeGbands">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">fourGBands</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <input placeholder="fourGBands" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.fourGBands"
+                name="fourGbands">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">speed</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <input placeholder="speed" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.speed" name="speed">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">gprs</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <input placeholder="gprs" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.gprs" name="gprs">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">edge</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <input placeholder="edge" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.edge" name="edge">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">announced</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <input placeholder="announced" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.announced"
+                name="announced">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">status</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+          <td>
+            <div class="md-form">
+              <input placeholder="status" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.status"
+                name="status">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">Dimentions</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="Dimentions" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.dimentions"
+                name="dimentions">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">weight</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="weight" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.weight"
+                name="weight">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">sim</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="sim" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.sim" name="sim">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">type</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="type" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.type" name="type">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">size</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="size" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.size" name="size">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">resolution</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="resolution" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.resolution"
+                name="resolution">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px ">multitouch</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="multitouch" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.multitouch"
+                name="multitouch">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">emui</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="emui" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.emui" name="emui">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">os</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="os" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.os" name="os">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">chipset</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+
+          <td>
+            <div class="md-form">
+              <input placeholder="chipset" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.chipset"
+                name="chipsst">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">cpu</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="cpu" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.cpu" name="cpu">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">gpu</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="gpu" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.gpu" name="gpu">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">cardslot</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="cardslot" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.cardslot"
+                name="cardslot">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">internal</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="internal" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.internal"
+                name="internal">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">mainCamfeatures</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="mainCamfeatures" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.mainCamfeatures"
+                name="maincamfeatures">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">mainCamVideos</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="mainCamVideos" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.mainCamVideos"
+                name="minCamVideos">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">selfiCamFeatures</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="selfiCamFeatures" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.selfiCamFeatures"
+                name="selfiCamFeatures">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">selfieCamVideos</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="selfieCamVideos" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.selfieCamVideos"
+                name="selfieCamVideos">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">alertType</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="alertType" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.alertType"
+                name="alertType">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">loudspeaker</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="loudspeaker" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.loudspeaker"
+                name="loudspeaker">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">jack</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="jack" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.lack" name="lack">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">wlan</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="wlan" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.wlan" name="wlan">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">bluetooth</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="bluetooth" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.bluetooth"
+                name="bluetooth">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">gps</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="gps" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.gps" name="gps">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">radio</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="radio" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.radio" name="radio">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">usb</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="usb" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.usb" name="usb">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">sensorsMessaging</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="sensorsMessaging" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.sensorsMessaging"
+                name="sensorsMassege">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">browser</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="browser" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.browser"
+                name="browser">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">color</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="color" type="text" class="form-control Tfield " [(ngModel)]="phoneDetails.color" name="color">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">other</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="other" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.other" name="other">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h6 style="margin-left: 0px">Price</h6>
+          </td>
+
+          <td>
+            <h6>:-</h6>
+          </td>
+
+          <td>
+            <div class="md-form">
+              <input placeholder="other" type="text" class="form-control Tfield" [(ngModel)]="phoneDetails.price" name="pricee">
+            </div>
+          </td>
+        </tr>
+
+      </table>
+      <table>
+        <tr>
+          <td>
+            <button style="margin-left: 480px;margin-bottom: 30px" (click)="savePhoneDetails()" name="btnsave" type="button"
+              class="btn btn-outline-success waves-effect">Add Phone&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"
+                aria-hidden="true"></i></button>
+          </td>
+          <td>
+            <button style="margin-left: 10px;margin-bottom: 30px" (click)="updatePhoneDetails()" name="btnupdate" type="button"
+              class="btn btn-outline-success waves-effect">Update Phone&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check"
+                aria-hidden="true"></i></button>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </form>
+  <!--</div>-->
+
+  <!--</div>-->
+</mat-card>
